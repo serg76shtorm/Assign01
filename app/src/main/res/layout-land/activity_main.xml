@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbarStyle="outsideInset">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintWidth_percent="0.5"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="228dp"
+            android:layout_height="223dp"
+            android:layout_gravity="center"
+            android:layout_weight="200"
+            android:contentDescription="@string/todo1"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="NestedWeights"
+            tools:srcCompat="@drawable/user" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="320dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/serhii_serhiichyk"
+            android:fontFamily="@font/ubuntu_lightitalic"
+            android:textColor="#FAFAFA"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="267dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="297dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/proger"
+            android:fontFamily="@font/oswald_variablefont_wght"
+            android:textColor="#B2B2B3"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="316dp"
+            android:layout_height="26dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/address"
+            android:fontFamily="@font/ubuntu_bolditalic"
+            android:textColor="#B2B2B3"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.46"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintHeight_percent="1"
+        app:layout_constraintWidth_percent="0.5"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/button1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="NestedWeights">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="@string/todo2"
+                app:srcCompat="@drawable/fico" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="@string/todo3"
+                app:srcCompat="@drawable/inico" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:contentDescription="@string/todo4"
+                app:srcCompat="@drawable/vkico" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_profile"
+            android:fontFamily="@font/ubuntu_bolditalic"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:strokeColor="@color/black"
+            app:strokeWidth="4dp"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:backgroundTint="#FB5E06"
+            android:text="@string/view_my_contacts"
+            android:fontFamily="@font/oswald_variablefont_wght"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

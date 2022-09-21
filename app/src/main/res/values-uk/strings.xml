@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Assign01</string>
+    <string name="serhii_serhiichyk">Сергій Сергійчик</string>
+    <string name="proger">Прогер</string>
+    <string name="address">Адресса</string>
+    <string name="edit_profile">Профіль</string>
+    <string name="view_my_contacts">Мої зв\'язки</string>
+    <string name="todo1">туДИ1</string>
+    <string name="todo2">туДИ2</string>
+    <string name="todo3">туДИ3</string>
+    <string name="todo4">туДИ4</string>
+</resources>

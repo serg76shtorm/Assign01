@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Assign01</string>
+    <string name="serhii_serhiichyk">Serhii Serhiichyk</string>
+    <string name="proger">Proger</string>
+    <string name="address">Address</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="view_my_contacts">VIEW My contacts</string>
+    <string name="todo1">TODO1</string>
+    <string name="todo2">TODO2</string>
+    <string name="todo3">TODO3</string>
+    <string name="todo4">TODO4</string>
+</resources>
