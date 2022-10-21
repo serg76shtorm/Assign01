@@ -19,8 +19,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="50"
+            android:weightSum="100"
             android:orientation="vertical"
             android:background="#000000">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/setting"
+                android:textColor="#B2B2B3"
+                android:textSize="24sp"
+                android:textStyle="italic"
+                android:onClick="onClickTextView"
+                tools:layout_editor_absoluteX="26dp"
+                tools:layout_editor_absoluteY="52dp"
+                tools:ignore="NestedWeights" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -28,9 +43,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="200"
+                android:background="@android:color/transparent"
                 android:contentDescription="@string/todo1"
                 tools:ignore="NestedWeights"
-                tools:srcCompat="@drawable/user" />
+                android:src="@drawable/user" />
 
             <TextView
                 android:id="@+id/textView"

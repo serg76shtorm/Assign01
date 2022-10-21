@@ -4,9 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/button_border.xml" value="0.199" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/krugliye_ugli.xml" value="0.1745" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/separation.xml" value="0.2155" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/separation_settings.xml" value="0.17" />
         <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/font/ubuntu.xml" value="0.15729166666666666" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/layout-land/activity_auth.xml" value="0.33" />
         <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/layout-land/activity_main.xml" value="0.33" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/layout/activity_auth.xml" value="0.33" />
         <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/layout/activity_sett.xml" value="0.33" />
       </map>
     </option>
   </component>

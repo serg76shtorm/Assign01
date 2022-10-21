@@ -9,4 +9,27 @@
     <string name="todo2">TODO2</string>
     <string name="todo3">TODO3</string>
     <string name="todo4">TODO4</string>
+    <string name="setting"><u>Setting</u></string>
+    <string name="todo5">TODO5</string>
+    <string name="let_s_get_acquainted">Let\'s get acquainted</string>
+    <string name="fill_out_the_profile_and_go_to_the_application">Fill out the profile and go to the application!</string>
+    <string name="emailaddress_must_contain_u0040_symbol">EmailAddress@hostname</string>
+    <string name="error_at_least_8_caracters">Error: \'123\' try</string>
+    <string name="remember_me">Remember me</string>
+    <string name="google">GOOGLE</string>
+    <string name="or">or</string>
+    <string name="register">REGISTER</string>
+    <string name="by_clicking_register_you_agree_to_our_terms_and_conditions">By clicking Register you agree to our Terms \n and Conditions</string>
+    <string name="todo6">TODO6</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="theme">Theme</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="english">English</string>
+    <string name="russian">Русский</string>
+    <string name="ukrain">Український</string>
+    <string name="language">Language</string>
 </resources>
