@@ -4,35 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/c_background"
     tools:context=".SettingActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
             android:text="@string/setting"
-            android:textSize="30sp"
+            android:textColor="@color/f_black_light"
+            android:textSize="@dimen/font_very_big"
+            app:layout_constraintBottom_toTopOf="@+id/view01"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
+
         <View
             android:id="@+id/view01"
             android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_layout_height"
             android:background="@drawable/separation_settings"
-            android:layout_height="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView13"
-            app:layout_constraintBottom_toBottomOf="@id/constraintLayout2"/>
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
         <ImageButton
             android:id="@+id/imageButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/todo7"
             android:onClick="onClickImageButton"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -43,15 +51,16 @@
         android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
         <TextView
             android:id="@+id/textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/theme"
-            android:textSize="25sp"
+            android:textColor="@color/f_black_light"
+            android:textSize="@dimen/font_big"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -73,7 +82,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/light"
-            android:textSize="20sp"
+            android:textColor="@color/f_black_light"
+            android:textSize="@dimen/font_middle"
             app:layout_constraintBottom_toBottomOf="@+id/switch1"
             app:layout_constraintEnd_toStartOf="@+id/switch1"
             app:layout_constraintStart_toStartOf="parent"
@@ -84,26 +94,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dark"
-            android:textSize="20sp"
+            android:textColor="@color/f_black_light"
+            android:textSize="@dimen/font_middle"
             app:layout_constraintBottom_toBottomOf="@+id/switch1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/switch1"
             app:layout_constraintTop_toTopOf="@+id/switch1" />
+
         <View
             android:id="@+id/view02"
             android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_layout_height"
             android:background="@drawable/separation"
-            android:layout_height="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/switch1"
-            app:layout_constraintBottom_toBottomOf="@id/constraintLayout3"/>
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
         <RadioGroup
             android:id="@+id/radio_group"
@@ -117,32 +130,32 @@
                 android:id="@+id/radio_en"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_weight="1"
-                android:text="@string/english"
+                android:layout_marginStart="@dimen/global_middle_long"
                 android:checked="true"
                 android:onClick="onClickRadioButton"
-                android:textSize="20sp" />
+                android:text="@string/english"
+                android:textColor="@color/f_black_light"
+                android:textSize="@dimen/font_middle" />
 
             <RadioButton
                 android:id="@+id/radio_ru"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_weight="1"
-                android:text="@string/russian"
+                android:layout_marginStart="@dimen/global_middle_long"
                 android:onClick="onClickRadioButton"
-                android:textSize="20sp" />
+                android:text="@string/russian"
+                android:textColor="@color/f_black_light"
+                android:textSize="@dimen/font_middle" />
 
             <RadioButton
                 android:id="@+id/radio_uk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_weight="1"
-                android:text="@string/ukrain"
+                android:layout_marginStart="@dimen/global_middle_long"
                 android:onClick="onClickRadioButton"
-                android:textSize="20sp" />
+                android:text="@string/ukrain"
+                android:textColor="@color/f_black_light"
+                android:textSize="@dimen/font_middle" />
 
         </RadioGroup>
 
@@ -151,17 +164,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/language"
-            android:textSize="25sp"
+            android:textColor="@color/f_black_light"
+            android:textSize="@dimen/font_big"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <View
             android:id="@+id/view03"
             android:layout_width="wrap_content"
+            android:layout_height="@dimen/view_layout_height"
             android:background="@drawable/separation_settings"
-            android:layout_height="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/radio_group"
-            app:layout_constraintBottom_toBottomOf="@id/constraintLayout4"/>
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

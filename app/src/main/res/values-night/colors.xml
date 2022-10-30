@@ -13,13 +13,12 @@
     <color name="f_white_static">#fafafa</color>
     <color name="f_gray_static">#b2b2b3</color>
     <color name="f_black_light_static">#18181f</color>
-    <color name="c_background">#ededed</color>
-    <color name="c_gradient_start">#DCE3E9</color>
-    <color name="f_white">#fafafa</color>
-    <color name="f_white_light">#000000</color>
-    <color name="f_gray">#b2b2b3</color>
-    <color name="f_gray_light">#bdbdbd</color>
-    <color name="f_black_light">#18181f</color>
+    <color name="c_background">#242235</color>
+    <color name="c_gradient_start">#5C5F61</color>
+    <color name="f_white">#18181f</color>
+    <color name="f_white_light">#ffffff</color>
+    <color name="f_gray">#828282</color>
+    <color name="f_gray_light">#828282</color>
+    <color name="f_black_light">#fafafa</color>
     <color name="f_red_error">#F93E3E</color>
-    <color name="ic_launch_green">#33FFFFFF</color>
 </resources>

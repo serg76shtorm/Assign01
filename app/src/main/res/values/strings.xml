@@ -5,6 +5,7 @@
     <string name="address">Address</string>
     <string name="edit_profile">Edit profile</string>
     <string name="view_my_contacts">VIEW My contacts</string>
+<!--    TODO: непойму? Warning:(8, 26) Did you mean "TODO!" instead of "TODO1"?-->
     <string name="todo1">TODO1</string>
     <string name="todo2">TODO2</string>
     <string name="todo3">TODO3</string>
@@ -22,7 +23,7 @@
     <string name="by_clicking_register_you_agree_to_our_terms_and_conditions">By clicking Register you agree to our Terms \n and Conditions</string>
     <string name="todo6">TODO6</string>
     <string name="already_have_an_account">Already have an account?</string>
-    <string name="sign_in">Sign in</string>
+    <string name="sign_in"><u>Sign in</u></string>
     <string name="e_mail">E-mail</string>
     <string name="password">Password</string>
     <string name="theme">Theme</string>
@@ -32,4 +33,6 @@
     <string name="russian">Русский</string>
     <string name="ukrain">Український</string>
     <string name="language">Language</string>
+    <string name="go_to_settings_and_fill_out_the_profile">Go to settings and fill out the profile</string>
+    <string name="todo7">TODO7</string>
 </resources>

@@ -22,7 +22,7 @@
     <string name="by_clicking_register_you_agree_to_our_terms_and_conditions">Нажимая «Зарегистрироваться», вы соглашаетесь \n с нашими Условиями использования</string>
     <string name="todo6">TODO6</string>
     <string name="already_have_an_account">У вас уже есть аккаунт?</string>
-    <string name="sign_in">Войти</string>
+    <string name="sign_in"><u>Войти</u></string>
     <string name="e_mail">Эл. почта</string>
     <string name="password">Пароль</string>
     <string name="theme">Тема</string>
@@ -32,4 +32,6 @@
     <string name="russian">Русский</string>
     <string name="ukrain">Український</string>
     <string name="language">Язык</string>
+    <string name="go_to_settings_and_fill_out_the_profile">Зайдите в настройки и заполните профиль</string>
+    <string name="todo7">TODO7</string>
 </resources>

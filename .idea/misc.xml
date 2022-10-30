@@ -3,8 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1565" />
         <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/button_border.xml" value="0.199" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/circle.xml" value="0.282" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/ic_fb.xml" value="0.3185" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/ic_g.xml" value="0.2365" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/ic_image_in_circle.xml" value="0.2845" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/ic_in.xml" value="0.3185" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/ic_inst.xml" value="0.3185" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/ic_kr.xml" value="0.2365" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/ic_kr_new.xml" value="0.2845" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1565" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/image_in_circle.xml" value="0.34" />
         <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/krugliye_ugli.xml" value="0.1745" />
+        <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/layerdrawable.xml" value="0.282" />
         <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/separation.xml" value="0.2155" />
         <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/drawable/separation_settings.xml" value="0.17" />
         <entry key="..\:/Program/IdeaProjects/shppAndroid/Assignment01/Assign01/app/src/main/res/font/ubuntu.xml" value="0.15729166666666666" />
