@@ -1,6 +1,6 @@
 package com.example.assign01.util
 
-class AppPreferences {
+object AppPreferences {
 
     val APP_SETTING ="appsetting"
     val APP_SETTING_THEME ="Theme"

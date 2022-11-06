@@ -20,8 +20,6 @@ class SettingActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySettBinding
     private lateinit var preferences: SharedPreferences
 
-    val appPref = AppPreferences()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySettBinding.inflate(layoutInflater)
@@ -40,14 +38,14 @@ class SettingActivity : AppCompatActivity() {
         val theme: Boolean
         val lang: Int
 
-        preferences = getSharedPreferences(appPref.APP_SETTING, Context.MODE_PRIVATE)
-        if (preferences.contains(appPref.APP_SETTING_THEME)) {
-            theme = preferences.getBoolean(appPref.APP_SETTING_THEME, false)
+        preferences = getSharedPreferences(AppPreferences.APP_SETTING, Context.MODE_PRIVATE)
+        if (preferences.contains(AppPreferences.APP_SETTING_THEME)) {
+            theme = preferences.getBoolean(AppPreferences.APP_SETTING_THEME, false)
             binding.switch1.isChecked = theme
         }
 
-        if (preferences.contains(appPref.APP_SETTING_LANG)) {
-            lang = preferences.getInt(appPref.APP_SETTING_LANG, 0)
+        if (preferences.contains(AppPreferences.APP_SETTING_LANG)) {
+            lang = preferences.getInt(AppPreferences.APP_SETTING_LANG, 0)
 //            TODO: работает в двух вариантах ????
 //            binding.radioGroup.check(radio_group.getChildAt(lang).id)
             binding.radioGroup.radio_group.check(binding.radioGroup.radio_group.getChildAt(lang).id)
@@ -73,9 +71,8 @@ class SettingActivity : AppCompatActivity() {
 
         recreate()
 
-        preferences = getSharedPreferences(appPref.APP_SETTING, Context.MODE_PRIVATE)
         val editor = preferences.edit()
-        editor.putInt(appPref.APP_SETTING_LANG, index).apply()
+        editor.putInt(AppPreferences.APP_SETTING_LANG, index).apply()
     }
 
     fun onClickSwitch(view: View) {
@@ -85,9 +82,8 @@ class SettingActivity : AppCompatActivity() {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         }
 
-        preferences = getSharedPreferences(appPref.APP_SETTING, Context.MODE_PRIVATE)
         val editor = preferences.edit()
-        editor.putBoolean(appPref.APP_SETTING_THEME, binding.switch1.isChecked).apply()
+        editor.putBoolean(AppPreferences.APP_SETTING_THEME, binding.switch1.isChecked).apply()
 
 //        val toast=Toast.makeText(this, "Зачем вы нажали?", Toast.LENGTH_SHORT).apply { setGravity(Gravity.TOP , 0, 0); show()}
 /*        toast.setGravity(Gravity.TOP or Gravity.RIGHT , 0, 0)//не работает

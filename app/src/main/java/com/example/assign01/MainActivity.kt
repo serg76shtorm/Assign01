@@ -15,7 +15,6 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    val appPref = AppPreferences()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun intentParsing() {
-        val email = intent.getStringExtra(appPref.APP_SETTING_EMAIL)
+        val email = intent.getStringExtra(AppPreferences.APP_SETTING_EMAIL)
         val charD = email.toString().indexOf('@', 0)
         val name = email.toString().substring(0, charD)
 

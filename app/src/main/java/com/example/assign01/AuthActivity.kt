@@ -20,7 +20,6 @@ import java.util.*
 class AuthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAuthBinding
     private lateinit var preferences: SharedPreferences
-    val appPref = AppPreferences()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,31 +32,34 @@ class AuthActivity : AppCompatActivity() {
             )
         )
 
-        binding.editTextTextEmailAddress.setOnFocusChangeListener(object :
-            View.OnFocusChangeListener {
-            override fun onFocusChange(v: View?, hasFocus: Boolean) {
-                if ((hasFocus) && (binding.textInputEditText2.isVisible)) {
-                    binding.textInputEditText2.visibility = View.INVISIBLE
-                } else if ((!hasFocus) && (binding.editTextTextEmailAddress.text.toString().length > 0)) {
+        setListeners()
+
+        initPreferences()
+    }
+
+    private fun setListeners() {
+        with(binding) {
+            editTextTextEmailAddress.setOnFocusChangeListener { _, hasFocus ->
+                if ((hasFocus) && (textInputEditText2.isVisible)) {
+                    textInputEditText2.visibility = View.INVISIBLE
+                } else if ((!hasFocus) && (editTextTextEmailAddress.text.toString()
+                        .isNotEmpty())
+                ) {
                     emailTest()
                 }
             }
-        })
 
-        binding.editTextTextPassword.setOnFocusChangeListener(object : View.OnFocusChangeListener {
-            override fun onFocusChange(v: View?, hasFocus: Boolean) {
-                if ((hasFocus) && (binding.textInputEditText.isVisible)) {
-                    binding.textInputEditText.visibility = View.INVISIBLE
-                } else if ((!hasFocus) && (binding.editTextTextPassword.text.toString().length >= 0)) {
+            editTextTextPassword.setOnFocusChangeListener { _, hasFocus ->
+                if ((hasFocus) && (textInputEditText.isVisible)) {
+                    textInputEditText.visibility = View.INVISIBLE
+                } else if ((!hasFocus) && (editTextTextPassword.text.toString().isNotEmpty())) {
                     passwordTest()
                 }
             }
-        })
-
-        getPreferences()
+        }
     }
 
-    fun getPreferences() {
+    private fun initPreferences() {
         val mode: Int
         val theme: Boolean
         val lang = LocaleManager().getLanguage(this)
@@ -68,61 +70,65 @@ class AuthActivity : AppCompatActivity() {
             recreate()
         }
 
-        preferences = getSharedPreferences(appPref.APP_SETTING, Context.MODE_PRIVATE)
-        if (preferences.contains(appPref.APP_SETTING_THEME)) {
-            theme = preferences.getBoolean(appPref.APP_SETTING_THEME, false)
+        preferences = getSharedPreferences(AppPreferences.APP_SETTING, Context.MODE_PRIVATE)
+        if (preferences.contains(AppPreferences.APP_SETTING_THEME)) {
+            theme = preferences.getBoolean(AppPreferences.APP_SETTING_THEME, false)
 
             mode = AppCompatDelegate.getDefaultNightMode()
-            if ((mode == -100) && (theme)) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            } else if ((mode == -100) && (!theme)) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            if (mode == AppCompatDelegate.MODE_NIGHT_UNSPECIFIED) {
+                if (theme) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                }
             }
         }
 
-        if (preferences.contains(appPref.APP_SETTING_EMAIL)) {
-            email = preferences.getString(appPref.APP_SETTING_EMAIL, "").toString()
+        if (preferences.contains(AppPreferences.APP_SETTING_EMAIL)) {
+            email = preferences.getString(AppPreferences.APP_SETTING_EMAIL, "").toString()
             binding.editTextTextEmailAddress.text =
                 Editable.Factory.getInstance().newEditable(email)
         }
     }
 
-    fun emailTest(): Boolean {
-        val charD = binding.editTextTextEmailAddress.text.toString().indexOf('@', 0)
-        if ((charD > 0) && (binding.editTextTextEmailAddress.text.toString()
+    fun emailTest() = binding.run {
+        val charD = editTextTextEmailAddress.text.toString().indexOf('@', 0)
+        if ((charD > 0) && (editTextTextEmailAddress.text.toString()
                 .indexOf('.', charD) >= 0)
         ) {
-            binding.textInputEditText2.visibility = View.INVISIBLE
-            return true
+            textInputEditText2.visibility = View.INVISIBLE
+            true
         } else {
-            binding.textInputEditText2.visibility = View.VISIBLE
+            textInputEditText2.visibility = View.VISIBLE
+            false
         }
-        return false
     }
 
-    fun passwordTest(): Boolean {
-        if (binding.editTextTextPassword.text.toString() == "123") {
-            binding.textInputEditText.visibility = View.INVISIBLE
-            return true
+
+    fun passwordTest() = binding.run {
+        if (editTextTextPassword.text.toString() == "123") {
+            textInputEditText.visibility = View.INVISIBLE
+            true
         } else {
-            binding.textInputEditText.visibility = View.VISIBLE
+            textInputEditText.visibility = View.VISIBLE
+            false
         }
-        return false
     }
+
 
     fun onClickButton(view: View) {
         if ((emailTest()) && (passwordTest())) {
             val email = binding.editTextTextEmailAddress.text.toString()
 
             if (binding.checkBox.isChecked) {
-                preferences = getSharedPreferences(appPref.APP_SETTING, Context.MODE_PRIVATE)
+//                preferences = getSharedPreferences(AppPreferences.APP_SETTING, Context.MODE_PRIVATE)
                 val editor = preferences.edit()
-                editor.putString(appPref.APP_SETTING_EMAIL, email).apply()
+                editor.putString(AppPreferences.APP_SETTING_EMAIL, email).apply()
 //                editor.clear().apply()
             }
 
             val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra(appPref.APP_SETTING_EMAIL, email)
+            intent.putExtra(AppPreferences.APP_SETTING_EMAIL, email)
 
             startActivity(intent)
             overridePendingTransition(R.anim.rotate, R.anim.alpha)
