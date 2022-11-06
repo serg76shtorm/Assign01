@@ -121,7 +121,6 @@ class AuthActivity : AppCompatActivity() {
             val email = binding.editTextTextEmailAddress.text.toString()
 
             if (binding.checkBox.isChecked) {
-//                preferences = getSharedPreferences(AppPreferences.APP_SETTING, Context.MODE_PRIVATE)
                 val editor = preferences.edit()
                 editor.putString(AppPreferences.APP_SETTING_EMAIL, email).apply()
 //                editor.clear().apply()
